@@ -142,6 +142,23 @@ The key principle is that the model should answer from retrieved context rather 
 
 ## Local Setup
 
+## Google Colab
+
+These notebooks are designed to work in Google Colab. Each of the main training and retrieval notebooks includes a first code cell that checks for Colab, clones the repository assets from GitHub, and copies the `data/` folder and PDF handbooks into the current workspace automatically.
+
+This allows the notebooks to run in the cloud without needing to manually upload the included datasets.
+
+### 📓 Interactive Colab Notebooks
+
+Click any badge to launch the lab directly in your browser:
+
+| Lab Phase | Direct Colab Link |
+| :--- | :--- |
+| **Phase 1: Lexical Search** | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/mattjunior039/CampusAIAssistantTutorial/blob/main/Phase_1_Lexical_Search_and_Rule_Based_Matching.ipynb) |
+| **Phase 2: Intent Classification** | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/mattjunior039/CampusAIAssistantTutorial/blob/main/Phase_2_Dense_Semantic_Embeddings_and_Intent_Classification.ipynb) |
+| **Phase 3: RAG with FAISS** | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/mattjunior039/CampusAIAssistantTutorial/blob/main/Phase_3_Retrieval_Augmented_Generation.ipynb) |
+| **Appendix A: Live Local LLM** | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/mattjunior039/CampusAIAssistantTutorial/blob/main/Appendix_A_Live_RAG_Inference_with_Local_Ollama.ipynb) |
+
 ### Requirements
 
 - Python 3.9+
