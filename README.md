@@ -17,8 +17,12 @@ The overall system is organized into four main learning stages:
 2. Phase 2: Dense Semantic Embeddings and Intent Classification
    - sentence embeddings with SentenceTransformers
    - intent labeling for campus requests
-   - logistic regression and SVM classification
-   - performance metrics and confusion matrices
+   - analogy-first semantic neighborhood explanations
+   - fill-in-the-blank logistic regression training
+   - raw 384-dimensional embedding inspection
+   - distance sandbox experiments
+   - 2D PCA and interactive 3D Plotly cluster visualization
+   - confidence-based out-of-distribution fallback payloads
 
 3. Phase 3: Retrieval-Augmented Generation
    - PDF ingestion and parsing
@@ -90,10 +94,13 @@ Core ideas:
 
 - transform user queries into dense embeddings
 - map queries into structured intent categories
-- train logistic regression or SVM classifiers
-- examine semantic similarity in hidden vector space
+- train a logistic regression intent classifier
+- examine semantic similarity through neighborhood intuition
+- inspect raw 384-dimensional embedding coordinates
+- compare related and unrelated questions in the distance sandbox
 - evaluate with accuracy, precision, recall, and F1-score
-- visualize clustering and embeddings via PCA and t-SNE
+- visualize clustering with 2D PCA and interactive 3D Plotly projections
+- reject weak predictions with a JSON-style OOD fallback
 
 The synthetic dataset includes balanced campus query classes such as:
 
@@ -103,7 +110,7 @@ The synthetic dataset includes balanced campus query classes such as:
 - `library_hours`
 - `academic_advising`
 
-This phase shows how dense representations reduce the synonym problem and improve generalization over lexical overlap.
+This phase shows how dense representations reduce the synonym problem and improve generalization over lexical overlap. It also includes a challenge to add a sixth custom intent class, `student_id_services`, with 10 new training examples.
 
 ## Phase 3: Retrieval-Augmented Generation
 
@@ -179,14 +186,14 @@ pip install -r requirements.txt
 
 For the appendix that runs the local LLM:
 
-1. Install Ollama: https://ollama.com/
+1. Install [Ollama](https://ollama.com/).
 2. Start the service:
 
 ```bash
 ollama serve
 ```
 
-3. Pull a model:
+1. Pull a model:
 
 ```bash
 ollama pull llama3.1
@@ -250,6 +257,7 @@ The project relies on:
 - `pandas`
 - `matplotlib`
 - `seaborn`
+- `plotly`
 - `scikit-learn`
 - `nltk`
 - `sentence-transformers`
