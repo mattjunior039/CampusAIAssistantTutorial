@@ -1,0 +1,461 @@
+query_text,intent_label
+parking permit for spring break,parking_permit
+help i got a tuition payment due notice but i already paid,tuition_payment
+dorm building closing time tonight?,dorm_maintenance
+I'm trying to schedule an appointment with my advisor but I keep getting a busy signal,academic_advising
+"i'm having trouble with the parking permit website, help!",parking_permit
+dorm sink is leking plz help ASAP,dorm_maintenance
+"need help w/ academic planning, pls",academic_advising
+when does the library open after thanksgiving break?,library_hours
+i need to know the dorm maintenance schedule cuz i wanna plan ahead,dorm_maintenance
+i've got a tuition payment plan in place but can someone double-check it for me?,tuition_payment
+I'm trying to schedule an appointment with my advisor but I keep getting a busy signal,academic_advising
+library hours during finals,library_hours
+i'm trying to get a loan for tuition but i need help with the application process,tuition_payment
+how 2 get library hours??,library_hours
+can I get a refund for my meal plan due to moving off-campus?,dorm_maintenance
+Can you tell me the office hours for the math department?,academic_advising
+dorm building rules and regulations regarding cleanliness,dorm_maintenance
+can I get a parking permit for my car?,dorm_maintenance
+I need help with my course load for next semester,academic_advising
+help i cant find where to pay my tuition online,tuition_payment
+i'm trying to set up a payment plan for my tuition but the system keeps crashing,tuition_payment
+can I get a replacement for my lost room key?,dorm_maintenance
+I'm having trouble with my financial aid package can you help?,academic_advising
+can i use a prepaid card to pay my tuition,tuition_payment
+fr need help with classes cuz my dorm room is too noisy,dorm_maintenance
+when does the library close for spring break?,library_hours
+tuition deadline is in a week and i still haven't gotten my bill can someone help me?,tuition_payment
+can someone remind me how to pay my tuition with a wire transfer?,tuition_payment
+parking permit for parking lot x,parking_permit
+how much is tuition for spring semester 2023,tuition_payment
+how do i know when my tuition payment is due for next semester?,tuition_payment
+what's the deal with the air conditioning in 202 hall?,dorm_maintenance
+I need help with my course selection for next semester,academic_advising
+can i get library hours for this week?,library_hours
+"I need help w/ my schedule, can you review it?",academic_advising
+help i cant find the librarys hours anywhere,library_hours
+URGENT: my financial aid is all messed up what do I do?,academic_advising
+"my dorm's vending machine is broken, what do I do?",dorm_maintenance
+how do i get the tuition payment discount for being a transfer student?,tuition_payment
+fr library hours r not on website,library_hours
+Can you tell me the office hours for the psychology department?,academic_advising
+who do I contact for internship opportunities?,academic_advising
+how do i add a parking permit to my car?,parking_permit
+can someone pls help me with the tuition payment because i'm running out of time,tuition_payment
+"dude, what time does the library close tomorrow night?",library_hours
+Can you tell me the requirements for the scholarship I'm applying for?,academic_advising
+my tuition payment didn't go through can i get help with the issue?,tuition_payment
+"my shower's clogged, who do I call?",dorm_maintenance
+"I need to change my major, can you tell me what I need to do?",academic_advising
+help! i'm trying to pay my tuition with my credit card but it keeps getting declined,tuition_payment
+"my vehicle registration is expiring soon, can i get a new permit?",parking_permit
+i'm trying to set up a payment plan for my tuition but it keeps crashing,tuition_payment
+Can you tell me the process for getting a parking pass?,academic_advising
+I need help with my course load for next semester,academic_advising
+tuition payment deadline is tomorrow what are the consequences of missing it,tuition_payment
+i need to report a maintenance issue in my dorm room,dorm_maintenance
+hey chatbot what time is the library open till?,library_hours
+"I need help w/ my schedule, can you review it?",academic_advising
+help! my registration hold is still active and i cant get my permit,parking_permit
+tuition payment deadline is tomorrow how do i expedite,tuition_payment
+who do I contact for internship opportunities?,academic_advising
+i tried to pay my tuition online but it says i owe more money,tuition_payment
+where can i get a parking permit without going to the office?,parking_permit
+library closing time today?,library_hours
+im trying to find a study group but cant find library hours,library_hours
+tuition payment address is wrong on my account how do i change it,tuition_payment
+need help w/ math placement exam,academic_advising
+library closing time for tuesday?,library_hours
+i'm trying to get a payment plan in place can someone walk me through the process?,tuition_payment
+URGENT: registration hold still active classes start tomorrow!!,dorm_maintenance
+"URGENT: I need to add a class, but it's full, can you help me?",academic_advising
+"I'm a transfer student, what's the best way to schedule an advising appointment?",academic_advising
+i'm trying to get a payment plan for my tuition but it keeps asking for my student ID,tuition_payment
+parking permit deadline,parking_permit
+help w/ course selection for next semester!,academic_advising
+how do i set up a tuition payment plan,tuition_payment
+"dorm maintenance team, my room is freezing in winter",dorm_maintenance
+dorm parking permit info cuz i dont have one,dorm_maintenance
+I'm trying to figure out which classes I need to take to graduate,academic_advising
+how do i pay my tuition with my student loan,tuition_payment
+fr can u send me the number for facilities cuz my toilet broke?,dorm_maintenance
+I'm trying to figure out which classes I need to take to graduate,academic_advising
+I need to schedule an advising appointment ASAP,academic_advising
+library hours on weekends,library_hours
+can I get a room upgrade due to academic achievements?,dorm_maintenance
+library open on sunday?,library_hours
+what are the tuition payment deadlines for spring semester,tuition_payment
+what time does the library open on monday?,library_hours
+i need help with tuition payment for graduate students,tuition_payment
+parking permit rules and reg,parking_permit
+dorm sink is leking plz help,academic_advising
+parking permit for my electric scooter?,parking_permit
+I'm trying to register for classes but I'm getting an error message,academic_advising
+can someone pls help me with my tuition payment because the site is being uncooperative,tuition_payment
+where can i park my car without a permit?,parking_permit
+how late is the library open tonight?,library_hours
+can i use financial aid to pay for tuition,tuition_payment
+how 2 get parkin pass?? is it related to tuition?,tuition_payment
+tuition payment is due in 2 days and i still haven't received my bill,tuition_payment
+dorm parking permit info please,dorm_maintenance
+is the dorm's gym open 24/7?,dorm_maintenance
+i have a scholarship that covers tuition how do i apply it,tuition_payment
+tuition deadline is in a week and i still haven't gotten my bill can someone assist me?,tuition_payment
+"I want to take a class in the humanities dept, but it's closed, what can I do?",academic_advising
+parking permit for students with vehicles,parking_permit
+"fr, how do I get a study abroad scholarship?",academic_advising
+library hours for summer intensive,library_hours
+yo where can i get a parking permit for next semester?,parking_permit
+where's the best place to study in the dorm?,dorm_maintenance
+parking permit for faculty,parking_permit
+parking permit for international students,parking_permit
+"I have a maintenance issue in my room, what's the process?",dorm_maintenance
+is there a late-night shuttle from the dorm to the library?,dorm_maintenance
+parking permit application,parking_permit
+library hours for juniors,library_hours
+i tried to pay my tuition online but it says my card is declined,tuition_payment
+can i pay my tuition in person at the bursar's office,tuition_payment
+"parking permit for employees, do we need one?",parking_permit
+parking permit for on-campus parking,parking_permit
+"need help w/ transfer credit evaluation, pls",academic_advising
+library hours for transfer students,library_hours
+"good morning, could you please provide guidance on scheduling an advising appointment to discuss tuition payment",tuition_payment
+Can you tell me the requirements for the honors program?,academic_advising
+help! my parents are paying my tuition but they need help with the paperwork,tuition_payment
+"Hello, I'm having trouble with my schedule, can you help me drop a class?",academic_advising
+yo where do i pay my bill?,tuition_payment
+i lost my tuition payment receipt what do i do,tuition_payment
+library open during holidays?,library_hours
+how do i schedule a payment for my tuition using my phone?,tuition_payment
+parking permit rules for visitors,parking_permit
+library open on friday night?,library_hours
+what time does the library close?,library_hours
+i want to know how to pay my tuition with a debit card,tuition_payment
+is the dorm's game room open on Sundays?,dorm_maintenance
+I need help with my course selection for next semester,academic_advising
+i need help with tuition payment for summer semester,tuition_payment
+what are the payment options for tuition payment,tuition_payment
+fr need help with classes,academic_advising
+how to get a parking permit for a car,parking_permit
+I'm having trouble accessing my grades online,academic_advising
+I need to schedule an advising appointment ASAP,academic_advising
+parking permit fees for students,parking_permit
+parking permit for summer session,parking_permit
+"parking permit for guests, can i get one?",parking_permit
+"parking permit renewal, help!",parking_permit
+Can you tell me the office hours for the registrar's office?,academic_advising
+hey chatbot can you tell me the librarys hours?,library_hours
+"help! my registration is still on hold, classes start tomorrow",academic_advising
+fr i need help with my dorm room door it wont lock,dorm_maintenance
+"parking permit for my brother's car, can i get one?",parking_permit
+can i get library hours for this semester?,library_hours
+yo where do i pay my bill?,academic_advising
+"dude, how do i get a parking permit on my car?",parking_permit
+im trying to schedule a group study but cant find library hours,library_hours
+what's the deadline to apply for graduation?,academic_advising
+Can I get a list of all the advisors for the different majors?,academic_advising
+i transferred credits from community college last fall and need to know which major advisor I should contact to approve my upper-division electives related to dorm maintenance,dorm_maintenance
+parking permit payment plan,parking_permit
+"I need help w/ time management, what resources are available?",academic_advising
+"i just transferred from another college, do i need a parking permit?",parking_permit
+URGENT: my dorm room is infested with ants!,dorm_maintenance
+where do i find the parking permit application?,parking_permit
+help my roomate left the stove on in the dorm kitchen what do i do?,dorm_maintenance
+"need help w/ FAFSA status, pls",academic_advising
+i'm trying to get a payment plan for my tuition but the system keeps saying it's full,tuition_payment
+"I'm having trouble with my bed, can someone fix it?",dorm_maintenance
+"i'm having trouble with the parking permit fees, help!",parking_permit
+I need to schedule an appointment with my advisor,academic_advising
+I'm having trouble accessing my grades online,academic_advising
+can someone walk me through the tuition payment process for international students?,tuition_payment
+"fr, what's the deal w/ academic probation?",academic_advising
+how do i cancel my parking permit?,parking_permit
+library closing time for friday night?,library_hours
+parking permit for staff,parking_permit
+urgent i need to finish my project and cant find library hours anywhere,library_hours
+library closing time tonight?,library_hours
+can u send me the dorm maintenance schedule cuz i wanna plan ahead,dorm_maintenance
+how do i check the librarys hours?,library_hours
+dorm sink is leking plz help cant wash hands,dorm_maintenance
+where do I go for study abroad advising?,academic_advising
+URGENT my registration hold is still active classes start tomorrow!!,dorm_maintenance
+library hours during spring break,library_hours
+library hours for seniors,library_hours
+can i pay my tuition with cash at the bursar's office,tuition_payment
+where is the parking permit office located?,parking_permit
+where can i find the librarys open hours online?,library_hours
+"I want to take a class in the engineering dept, but it's closed, what can I do?",academic_advising
+"I'm a junior, what are my options for declaring a minor?",academic_advising
+library hours over winter,library_hours
+FAFSA status is still pending how will that affect my tuition payment?,tuition_payment
+can i get a parking permit without a car,parking_permit
+how do I change my major?,academic_advising
+"my room's heater's on the fritz, what do I do?",dorm_maintenance
+fr need help with classes cuz my tuition is past due,tuition_payment
+library open late tonight?,library_hours
+library hours for international students,library_hours
+how long does it take to get a parking permit?,parking_permit
+how do i get a parking permit for my motorcycle?,parking_permit
+i'm trying to buy a permit but it keeps saying i'm not eligible,parking_permit
+yo where can i find the maintenance request form online?,dorm_maintenance
+i got accepted but havent paid tuition yet how do i pay,tuition_payment
+i need to know the librarys hours for my paper,library_hours
+urgent need parking permit for finals,parking_permit
+i'm trying to set up a payment plan for my tuition but it keeps asking for my SSN,tuition_payment
+help i got a tuition payment refund but its not showing in my account,tuition_payment
+URGENT need library hours ASAP,library_hours
+"parking permit office hours, when are they?",parking_permit
+URGENT: my registration hold is still active classes start tomorrow!!,academic_advising
+where's the nearest laundry facility?,dorm_maintenance
+how do i schedule a maintenance request for my dorm room?,dorm_maintenance
+who do I contact for upper-division electives?,academic_advising
+"dorm maintenance team, my room is too cold in winter",dorm_maintenance
+i need to return a book but cant find library hours,library_hours
+can u send me the dorm wifi password cuz i cant connect,dorm_maintenance
+tuition payment is due in 2 days and i still haven't received my bill can someone help me?,tuition_payment
+I'm having issues with my room's electrical outlets.,dorm_maintenance
+where do i pick up my parking permit?,parking_permit
+I need help with a pest control issue in my room.,dorm_maintenance
+"i lost my parking permit, can i get a new one?",parking_permit
+how do i pay my tuition with my parents help,tuition_payment
+tuition deadline is coming up can someone remind me how to pay my tuition?,tuition_payment
+"fr, how do I get a transfer eval?",academic_advising
+can someone pls remind me how to pay my tuition bill because i forgot,tuition_payment
+I'm having trouble with my room's lighting fixtures.,dorm_maintenance
+parking permit for students with disabilities,parking_permit
+who's the best advisor for engineering majors?,academic_advising
+how do i pay for parking permit online,parking_permit
+"i'm trying to buy a permit but the website keeps timing out, lol",parking_permit
+I'm having trouble with my financial aid package can you help?,academic_advising
+im trying to find a quiet spot to study but cant find library hours,library_hours
+I'm having trouble accessing my financial aid info can you help?,academic_advising
+my reg hold is still active cant get parking permit,parking_permit
+can i get library hours for this semester?,library_hours
+what are the payment options for my tuition and can i get a reminder?,tuition_payment
+my bank said the tuition payment went through but its not showing on my account,tuition_payment
+i tried to pay my tuition online but it says i need to contact the bursar's office,tuition_payment
+where can i pay for my parking permit?,parking_permit
+parking permit requirements,parking_permit
+"dorm maintenance team, water leak in room 304 needs attention ASAP!",dorm_maintenance
+can u send me the number for the dorm maintenance team?,dorm_maintenance
+URGENT! i need help with my dorm room temp its like a sweatbox in here!,dorm_maintenance
+i'm having trouble getting the tuition payment link to work can someone help me?,tuition_payment
+I need help with a leaky faucet in my room.,dorm_maintenance
+library hours during finals week,library_hours
+"library open late on thursday, right?",library_hours
+"good morning, i need to know when the library is open today",library_hours
+Can u tell me the prof for 101 psych class?,academic_advising
+yo need help w/ reg holds!,academic_advising
+where can i find the librarys open hours online?,library_hours
+parking permit for commuter students,parking_permit
+how much does a parking permit cost for a senior?,parking_permit
+library hours on holidays,library_hours
+"library hours for this wknd, pls",library_hours
+yo where's the laundry room in my dorm?,dorm_maintenance
+how 2 get my dorm key card fixed?,dorm_maintenance
+can someone walk me through the tuition payment process for graduate students?,tuition_payment
+what's the process for appealing a grade?,academic_advising
+fr i need help with my dorm room door it wont lock,dorm_maintenance
+parking permit for first-year students,parking_permit
+"I'm a double major, what are my obligations?",academic_advising
+"fr, what's the deal w/ academic dishonesty?",academic_advising
+library hours for fall break,library_hours
+i need to know when the library is open tomorrow,library_hours
+can I get a refund for my parking permit due to moving off-campus?,dorm_maintenance
+library open early tomorrow?,library_hours
+"URGENT: my advisor is on leave, who do I talk to?",academic_advising
+library open on saturday morning?,library_hours
+parking permit for guests,parking_permit
+where do i get a temporary parking permit for my friend's car?,parking_permit
+library hours for spring break,library_hours
+library hours for winter intersession,library_hours
+library open 24/7 for finals week?,library_hours
+Can you tell me the process for getting a student loan?,academic_advising
+I'm having trouble with my FAFSA can you walk me through it?,academic_advising
+"dorm microwave's not working, can you help?",dorm_maintenance
+"dorm sink is leaking in my room, btw, what's library hours?",library_hours
+"parking permit for international students, do we need one?",parking_permit
+"i need to buy a parking permit, how do i do that?",parking_permit
+i need a replacement key for my dorm room door,dorm_maintenance
+can I get a room change due to health concerns?,dorm_maintenance
+can I get a room change due to roommate issues?,dorm_maintenance
+what if i have multiple cars need parking permit,parking_permit
+parking permit for graduate students,parking_permit
+library closing time tonite,library_hours
+"plz help, my toilet's overflowing in 301 hall!",dorm_maintenance
+Can you tell me the requirements for the honors program?,academic_advising
+how do I get a parking pass?,academic_advising
+parking permit for winter quarter,parking_permit
+what time does the library close tonight?,library_hours
+what's the deadline to declare a minor?,academic_advising
+parking permit for winter break,parking_permit
+i need to meet with a professor but cant find library hours,library_hours
+library hours for online students,library_hours
+parking permit for off-campus parking,parking_permit
+library hours over summer,library_hours
+tuition payment address is incorrect on my account how do i change it,tuition_payment
+I'm trying to register for classes but I'm getting an error message,academic_advising
+i'm trying to get a refund on my tuition payment but the site is being unresponsive,tuition_payment
+library closing time for friday?,library_hours
+help! i'm trying to pay my tuition with a credit card but it keeps getting declined,tuition_payment
+can I get a room upgrade due to personal reasons?,dorm_maintenance
+how 2 get my dorm room cleaned cuz its gross lol,dorm_maintenance
+"parking permit issues, i need help!",parking_permit
+my parents are sending me the tuition payment but i dont see it in my account,tuition_payment
+how do i update my tuition payment method,tuition_payment
+can i pay my tuition in installments,tuition_payment
+"parking permit for students with disabilities, do we need one?",parking_permit
+"parking permit issues, help!",parking_permit
+what's the process for declaring a major?,academic_advising
+library open during fall semester,library_hours
+can u send me the number for the dorm maintenance team cuz i need help,dorm_maintenance
+fr need help with classes and parking permit stuff,parking_permit
+help! i'm trying to pay my tuition fees but the portal is being weird,tuition_payment
+where's the nearest trash and recycling bin?,dorm_maintenance
+how do i check the librarys open hours?,library_hours
+where can i find the librarys hours?,library_hours
+parking permit for my car with a salvage title?,parking_permit
+i need help with tuition payment for study abroad programs,tuition_payment
+library open late tonight?,library_hours
+can u pls help me with my dorm room lights they're not working,dorm_maintenance
+library open 24/7 or what?,library_hours
+can I get a refund for my dorm fees due to moving off-campus?,dorm_maintenance
+who's the best advisor for computer science majors?,academic_advising
+i got a notice that my tuition is due today pls help,tuition_payment
+what's the process for reporting a maintenance issue?,dorm_maintenance
+I need help with my course selection for next semester,academic_advising
+how 2 get a parking permit??,parking_permit
+can u tell me when the next floor meeting is?,dorm_maintenance
+"I'm a transfer student, what kind of advising support can I expect?",academic_advising
+i need a replacement key for my dorm room door cuz i lost it,dorm_maintenance
+"i just graduated, do i need to return my parking permit?",parking_permit
+parking permit info pls,parking_permit
+what's the library hours for exam week?,library_hours
+dorm parking permit info cuz i forgot to get one,dorm_maintenance
+my bank says there was a processing error on my tuition payment can i get help?,tuition_payment
+how do i know if my tuition payment was accepted,tuition_payment
+my parents are sending me a check for tuition payment but i dont see it in my account,tuition_payment
+I'm having trouble with my room's air conditioning.,dorm_maintenance
+library hours on weekends,library_hours
+can u pls help me with my dorm room temperature its too hot,dorm_maintenance
+Can I get a list of courses that fulfill the gen eds?,academic_advising
+my tuition payment was accepted but i still see a balance on my account,tuition_payment
+library hours during summer break,library_hours
+is the fitness center open till midnight?,dorm_maintenance
+what's the policy on overnight guests in the dorm?,dorm_maintenance
+can i get library hours for next semester?,library_hours
+parking permit for my rental car?,parking_permit
+can you tell me about the honors thesis process?,academic_advising
+"fr, need help with parking permit stuff",parking_permit
+i'm trying to pay my tuition but it keeps asking for my student ID,tuition_payment
+yo where do i get my parkin permit??,parking_permit
+parking permit for upper-division students,parking_permit
+"I need to drop a class, can you help me with that?",academic_advising
+help i accidentally overpaid my tuition by 1000 dollars,tuition_payment
+what time is the library open tomorrow?,library_hours
+I need help with my course selection for next semester,academic_advising
+can someone tell me the tuition payment deadline for online students?,tuition_payment
+library open on thursday night?,library_hours
+i need help with tuition payment plans,tuition_payment
+"i just moved into the dorms, do i need a parking permit?",parking_permit
+i want to know how to pay my tuition with a credit card online,tuition_payment
+Library closing time tonight,academic_advising
+library closing time tonight?,academic_advising
+dorm building closing time tonight cuz i wanna study,dorm_maintenance
+when does the library open for summer session?,library_hours
+"help! my advisor is out of the office, what do I do now?",academic_advising
+"I want to take a class in the business dept, but it's closed, what can I do?",academic_advising
+library hours for freshmen,library_hours
+what's the dorm's WiFi password?,dorm_maintenance
+"dorm maintenance team, my room is too hot in summer",dorm_maintenance
+dorm room cleanliness standards for shared spaces,dorm_maintenance
+library closing time for saturday?,library_hours
+I'm having trouble with my FAFSA can you walk me through it?,academic_advising
+can I get a replacement for my lost dorm ID?,dorm_maintenance
+Can you tell me the office hours for the psychology department?,academic_advising
+Can you tell me when the library is open?,academic_advising
+library hours for graduate students,library_hours
+i need to finish my project but cant find library hours,library_hours
+what's the policy on decorating my dorm room?,dorm_maintenance
+dorm room cleanliness standards please,dorm_maintenance
+i'm trying to buy a permit but it keeps saying i already have one,parking_permit
+i got a tuition payment due notice but i already paid my tuition,tuition_payment
+can u pls help me with my dorm room temperature its too cold,dorm_maintenance
+library closing time tonight in dorm building?,dorm_maintenance
+library hours for undergraduate students,library_hours
+I need help with a issue with my dorm's thermostat.,dorm_maintenance
+parking permit price list,parking_permit
+frankly i'm stumped about paying for classes can someone assist me??,tuition_payment
+where can i go to pay my tuition on campus?,tuition_payment
+"Hey chatbot, how do I drop a class?",academic_advising
+"I need to change my major, can you tell me what I need to do?",academic_advising
+omg my mom just sent me my loan papers how do i get them processed?,tuition_payment
+tuition payment is due in 3 days and i still haven't received my bill can someone help me?,tuition_payment
+URGENT: my dorm room ceiling leak is causing damage!,dorm_maintenance
+i need help with tuition payment for online courses,tuition_payment
+what's the process for requesting a room move?,dorm_maintenance
+"help w/ gen eds, pls",academic_advising
+can someone pls help me with the tuition payment because the site is being uncooperative,tuition_payment
+library open early tomorrow?,library_hours
+Can you tell me the requirements for the scholarship I'm applying for?,academic_advising
+tuition deadline is coming up can someone remind me how to pay?,tuition_payment
+library open late tonight?,library_hours
+I need help with a issue with my dorm's elevator.,dorm_maintenance
+how do I request a new mattress?,dorm_maintenance
+can i pay my tuition with a credit card,tuition_payment
+library closing time for thursday?,library_hours
+how do i get the tuition payment discount for being a veteran?,tuition_payment
+"fr, how do I get a tutor for my math class?",academic_advising
+yo where's the library gonna be open till?,library_hours
+can i get a replacement parking permit if mine is lost?,parking_permit
+hey chatbot what are the librarys hours?,library_hours
+Can you tell me the process for getting a parking pass?,academic_advising
+parking permit for parking permit office,parking_permit
+library open on wednesday night?,library_hours
+I'm having trouble accessing my financial aid info can you help?,academic_advising
+yo where can i find the librarys open hours?,library_hours
+what's the process for moving to a different dorm?,dorm_maintenance
+i've got a scholarship but how do i confirm that it's applied to my tuition?,tuition_payment
+library open early tomorrow?,library_hours
+URGENT need help with tuition payment deadline!! classes start in 3 days!!,tuition_payment
+"parking permit for summer sessions, do we need one?",parking_permit
+what's the process for reporting a maintenance issue in the dorm?,dorm_maintenance
+"I need to drop a class, can you help me with that?",academic_advising
+can u pls help me figure out why my dorm room light is flickering?,dorm_maintenance
+i'm trying to register for classes but my parking permit is still pending,parking_permit
+library closing time tonight and i still need to pay my tuition fee,tuition_payment
+yo how do i pay my tuition bill online?,tuition_payment
+library hours for sophomores,library_hours
+can I report a noise complaint against my neighbor?,dorm_maintenance
+what's the policy on guest visits in the dorm?,dorm_maintenance
+help i forgot to pay my tuition on time and now i have a hold on my account,tuition_payment
+library hours for summer semester,library_hours
+can i get a parking permit for my car with a vanity plate?,parking_permit
+library open on weekends?,library_hours
+FAFSA status and dorm payment deadline,dorm_maintenance
+"I'm a freshman, what's the best way to get started with advising?",academic_advising
+library open during winter break,library_hours
+How do I get in touch with my academic advisor?,academic_advising
+how to check library hours online?,library_hours
+I'm having trouble with my dorm's smoke detector.,dorm_maintenance
+library open during spring semester,library_hours
+where is the closest parking permit office?,parking_permit
+parking permit for parking garage y,parking_permit
+can i get a temporary parking permit for my friend's car?,parking_permit
+what time is the library open today?,library_hours
+dorms sell parking permit right?,parking_permit
+can you tell me about the honors program?,academic_advising
+i've got a tuition payment plan in place but can someone double-check it for me because i'm worried,tuition_payment
+library hours during break,library_hours
+how do i report a maintenance issue in my dorm room?,dorm_maintenance
+parking permit for freshmen,parking_permit
+I'm having trouble accessing my financial aid info can you help?,academic_advising
+can i pay my tuition late without penalty,tuition_payment
+"Good morning, I was wondering if you could assist me with scheduling a maintenance request for my dorm room?",dorm_maintenance
+how do i get the tuition payment discount for being on the Dean's List?,tuition_payment
+what if i lost my parking permit receipt,parking_permit
+I need help with a issue with my dorm's vending machines.,dorm_maintenance
+library hours during winter break,library_hours
+how 2 get parkin pass??,academic_advising
+can i get a parking permit if im not living in dorms,parking_permit
