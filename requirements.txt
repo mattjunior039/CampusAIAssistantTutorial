@@ -25,6 +25,6 @@ langchain-text-splitters>=0.3.0
 # Local LLM integration
 ollama>=0.1.0
 
-# Notebook tooling
+# Notebook to
 jupyter>=1.0.0
 ipykernel>=6.29.0
