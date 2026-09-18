@@ -162,6 +162,9 @@ Click any badge to launch the lab directly in your browser:
 | Lab Phase | Direct Colab Link |
 | :--- | :--- |
 | **Phase 1: Lexical Search** | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/mattjunior039/CampusAIAssistantTutorial/blob/main/Phase_1_Lexical_Search_and_Rule_Based_Matching.ipynb) |
+
+| **Phase 1: Lexical Search** | [![Open In Colab](https://colab.research.google.com/github/mattjunior039/CampusAIAssistantTutorial/blob/main/New_Phase_1_Lexical_Search_and_Rule_Based_Matching.ipynb) |
+
 | **Phase 2: Intent Classification** | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/mattjunior039/CampusAIAssistantTutorial/blob/main/Phase_2_Dense_Semantic_Embeddings_and_Intent_Classification.ipynb) |
 | **Phase 3: RAG with FAISS** | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/mattjunior039/CampusAIAssistantTutorial/blob/main/Phase_3_Retrieval_Augmented_Generation.ipynb) |
 | **Appendix A: Live Local LLM** | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/mattjunior039/CampusAIAssistantTutorial/blob/main/Appendix_A_Live_RAG_Inference_with_Local_Ollama.ipynb) |
