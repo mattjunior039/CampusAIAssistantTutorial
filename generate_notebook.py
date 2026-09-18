@@ -171,7 +171,7 @@ import subprocess
 from typing import List, Dict, Any, Tuple, Optional
 
 # Install required packages if missing in the environment
-required_packages = ["scikit-learn", "nltk", "pandas", "numpy", "matplotlib", "seaborn"]
+required_packages = ["scikit-learn", "nltk", "pandas", "numpy", "matplotlib", "seaborn", "ipywidgets"]
 for pkg in required_packages:
     try:
         __import__(pkg.replace("-", "_"))
@@ -185,6 +185,8 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
 import nltk
+import ipywidgets as widgets
+from IPython.display import display
 
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
@@ -200,7 +202,8 @@ from nltk.tokenize import word_tokenize
 print(f"[OK] Python version: {sys.version.split()[0]}")
 print(f"[OK] NumPy version: {np.__version__}")
 print(f"[OK] Pandas version: {pd.__version__}")
-print(f"[OK] NLTK & Scikit-Learn successfully configured.")""")
+print(f"[OK] NLTK & Scikit-Learn successfully configured.")
+print(f"[OK] ipywidgets ready for interactive TF-IDF exploration.")""")
 
     # CELL 6: STEP 3.2: CORPUS SYNTHESIS MARKDOWN
     add_md("""### 3.2 Campus FAQ Knowledge Base Synthesis
@@ -371,40 +374,48 @@ Let us implement this pipeline with full type signatures and verify it with a si
 
 ENGLISH_STOPWORDS: set = set(stopwords.words("english"))
 
+def preview_tokenization(text: str) -> None:
+    text_lower = text.lower()
+    text_clean = re.sub(r"[^a-zA-Z0-9\\s]", " ", text_lower)
+    raw_tokens = word_tokenize(text_clean)
+    content_tokens = [
+        token for token in raw_tokens
+        if token not in ENGLISH_STOPWORDS and len(token) >= 1
+    ]
+    print(f"Lowercased:       {text_lower}")
+    print(f"Tokenized:        {raw_tokens}")
+    print(f"After stop words: {content_tokens}")
+
+preview_text = widgets.Text(
+    value="Tuition deposits for F-1 visa students are due by Friday!",
+    placeholder="Type a sentence...",
+    description="Sentence:",
+    style={"description_width": "initial"},
+    layout=widgets.Layout(width="700px"),
+)
+preview_output = widgets.Output()
+
+def update_token_preview(change: dict | None = None) -> None:
+    with preview_output:
+        preview_output.clear_output(wait=True)
+        preview_tokenization(preview_text.value)
+
+preview_text.observe(update_token_preview, names="value")
+display(preview_text, preview_output)
+update_token_preview()
+
 def tokenize_and_clean(text: str, remove_stopwords: bool = True) -> List[str]:
-    \"\"\"
-    Sanitizes, lowercases, tokenizes, and filters stop words from an input string.
-    
-    Design Note on Single-Character Tokens:
-    We preserve single alphanumeric tokens (e.g., '1' and 'f' in 'F-1 visa', building 'A', grade 'A')
-    by checking len(tok) >= 1, while stripping empty tokens and filtering out stop words.
-
-    Args:
-        text (str): The raw input string to be preprocessed.
-        remove_stopwords (bool): Whether to filter out standard English stop words.
-
-    Returns:
-        List[str]: A list of clean, normalized word tokens.
-    \"\"\"
+    \"\"\"Cleans a raw string into a list of normalized token strings.\"\"\"
     if not isinstance(text, str):
         return []
-    
-    # 1. Lowercase
-    text_lower = text.lower()
-    
-    # 2. Strip punctuation and special characters (retain alphanumeric and spaces)
-    text_clean = re.sub(r"[^a-zA-Z0-9\s]", " ", text_lower)
-    
-    # 3. NLTK word tokenization
-    tokens = word_tokenize(text_clean)
-    
-    # 4. Optional Stop-Word Filtering & Single-Character Handling (len >= 1)
-    if remove_stopwords:
-        tokens = [tok for tok in tokens if tok not in ENGLISH_STOPWORDS and len(tok) >= 1]
-    else:
-        tokens = [tok for tok in tokens if len(tok) >= 1]
-        
-    return tokens
+
+    text_lower = ...  # TODO: text.lower()
+    text_clean = ...  # TODO: re.sub(r"[^a-zA-Z0-9\\s]", " ", text_lower)
+    tokens = ...  # TODO: word_tokenize(text_clean)
+
+    final_tokens = []
+    # TODO: Keep non-empty tokens and optionally remove stop words.
+    return final_tokens
 
 # Side-by-Side Comparison Demonstration
 sample_raw_sentences = [
@@ -415,9 +426,9 @@ sample_raw_sentences = [
 
 print(f"{'RAW TEXT':<70} | {'SANITIZED TOKENS'}")
 print("-" * 115)
-for s in sample_raw_sentences:
-    cleaned = tokenize_and_clean(s)
-    print(f"{s:<70} | {cleaned}")""")
+for sentence in sample_raw_sentences:
+    cleaned = tokenize_and_clean(sentence)
+    print(f"{sentence:<70} | {cleaned}")""")
 
     # CELL 10: STEP 3.3: ASSERTION TESTS
     add_code("""# Self-Check Unit Test: Preprocessing Pipeline
@@ -597,14 +608,14 @@ def search_campus_faq(
     # Since both query_vec and doc_matrix are L2-normalized, linear dot product is exact cosine similarity
     similarities = cosine_similarity(query_vec, doc_matrix).flatten()
     
-    # 3. Sort document indices by descending cosine similarity
-    ranked_indices = np.argsort(similarities)[::-1]
+    # 3. Sort and slice document indices by descending cosine similarity
+    ranked_indices = np.argsort(similarities)[::-1][:top_k]
     
     feature_names = np.array(vectorizer.get_feature_names_out())
     query_dense = query_vec.toarray().flatten()
     
-    results = []
-    for rank, doc_idx in enumerate(ranked_indices[:top_k], start=1):
+    valid_matches = []
+    for rank, doc_idx in enumerate(ranked_indices, start=1):
         score = float(similarities[doc_idx])
         doc_dense = doc_matrix[doc_idx].toarray().flatten()
         
@@ -627,19 +638,23 @@ def search_campus_faq(
         matched_terms_list = [mk["term"] for mk in matched_keywords]
         
         row = faq_df.iloc[doc_idx]
-        results.append({
+        candidate = {
             "rank": rank,
             "faq_id": row["faq_id"],
             "category": row["category"],
             "question": row["question"],
             "answer": row["answer"],
             "cosine_score": round(score, 4),
-            "is_above_threshold": score >= threshold,
+            "is_above_threshold": True,
             "matched_keywords": matched_terms_list,
             "detailed_contributions": matched_keywords
-        })
-        
-    return results
+        }
+
+        # STUDENT TODO: Uncomment these lines to keep confident matches.
+        # if score >= threshold:
+        #     valid_matches.append(candidate)
+
+    return valid_matches
 
 def print_search_results(query: str, results: List[Dict[str, Any]]) -> None:
     \"\"\"CLI formatted display helper for search results.\"\"\"
@@ -667,8 +682,12 @@ def test_search_engine():
         threshold=0.1
     )
     
-    assert len(res) == 3, "Must return exactly top_k (3) results."
-    assert res[0]["cosine_score"] >= res[1]["cosine_score"] >= res[2]["cosine_score"], "Results must be sorted descending."
+    assert 1 <= len(res) <= 3, "Return only confident matches, capped at top_k."
+    assert all(
+        first["cosine_score"] >= second["cosine_score"]
+        for first, second in zip(res, res[1:])
+    ), "Results must be sorted descending."
+    assert all(result["cosine_score"] >= 0.1 for result in res), "Every result must meet the threshold."
     assert 0.0 <= res[0]["cosine_score"] <= 1.0, "Cosine score must be bounded within [0, 1]."
     assert "faq_id" in res[0] and "matched_keywords" in res[0], "Expected output keys missing."
     print("[PASS] Search Engine Basic Invariants Validated Successfully!")
@@ -780,12 +799,12 @@ To solidify your understanding of vector space mechanics and production engineer
 
 ---
 
-### Task A: N-Gram Range Exploration & Dimensional Explosion
+### Task A: Interactive N-Gram Range Exploration & Dimensional Explosion
 Currently, our vectorizer uses unigrams `ngram_range=(1, 1)`. When we expand the n-gram range to include bigrams `(1, 2)` or trigrams `(1, 3)`:
 - We preserve local word order (e.g., `"river bank"` becomes a distinct feature from `"commercial bank"`).
-- **The Tradeoff:** The vocabulary size $|V|$ explodes, and matrix sparsity increases dramatically.
+- **The Tradeoff:** The vocabulary size $|V|$ explodes and matrix density falls as sparsity increases.
 
-**Your Objective:** Write a function `compare_ngram_dimensions(corpus_texts, ngram_configs)` that iterates over multiple n-gram settings, calculates vocabulary size, non-zero entries, and matrix sparsity, and displays the comparative table.
+Move the range slider and compare each selection with the unigram baseline in the live chart.
 
 ---
 
@@ -797,67 +816,63 @@ In a live campus assistant, returning an irrelevant FAQ with a low similarity sc
 2. If `top_score < threshold`, returns a structured fallback payload directing the student to campus human support, rather than delivering incorrect information.""")
 
     # CELL 23: TASK A CODE
-    add_code("""# =============================================================================
-# STUDENT TASK A: N-GRAM RANGE & DIMENSIONAL EXPLOSION
-# =============================================================================
+    add_code("""# Interactive N-Gram Dimensionality Explorer
 
-def compare_ngram_dimensions(
-    corpus_texts: List[str], 
-    ngram_configs: List[Tuple[int, int]]
-) -> pd.DataFrame:
-    \"\"\"
-    Analyzes how different n-gram ranges affect vocabulary size and matrix sparsity.
+ngram_slider = widgets.IntRangeSlider(
+    value=(1, 1), min=1, max=3, step=1,
+    description="N-gram range:", continuous_update=True,
+    style={"description_width": "initial"},
+    layout=widgets.Layout(width="600px"),
+)
 
-    Args:
-        corpus_texts (List[str]): List of document strings.
-        ngram_configs (List[Tuple[int, int]]): List of (min_n, max_n) tuples to evaluate.
+def measure_ngram_space(ngram_range: Tuple[int, int]) -> Dict[str, Any]:
+    experiment_vectorizer = TfidfVectorizer(
+        tokenizer=tokenize_and_clean,
+        token_pattern=None,
+        ngram_range=ngram_range,
+        norm="l2",
+    )
+    experiment_matrix = experiment_vectorizer.fit_transform(faq_df["full_text"])
+    document_count, vocabulary_size = experiment_matrix.shape
+    total_slots = document_count * vocabulary_size
+    density = (experiment_matrix.nnz / total_slots) * 100.0
+    return {
+        "vocabulary_size": vocabulary_size,
+        "density": density,
+        "sparsity": 100.0 - density,
+    }
 
-    Returns:
-        pd.DataFrame: Comparative metrics across n-gram configurations.
-    \"\"\"
-    records = []
-    
-    for (min_n, max_n) in ngram_configs:
-        v = TfidfVectorizer(
-            tokenizer=tokenize_and_clean,
-            token_pattern=None,
-            ngram_range=(min_n, max_n),
-            norm="l2"
-        )
-        dtm = v.fit_transform(corpus_texts)
-        
-        num_docs, vocab_dim = dtm.shape
-        nnz = dtm.nnz
-        total_slots = num_docs * vocab_dim
-        sparsity_pct = (1.0 - (nnz / total_slots)) * 100.0
-        
-        # Sample some bigram/trigram features if present
-        features = v.get_feature_names_out()
-        multi_word_features = [f for f in features if " " in f]
-        sample_feature_str = ", ".join(multi_word_features[:3]) if multi_word_features else "None (Unigrams only)"
-        
-        records.append({
-            "N-Gram Range": f"({min_n}, {max_n})",
-            "Vocabulary Size (|V|)": vocab_dim,
-            "Non-Zero Elements": nnz,
-            "Matrix Sparsity (%)": round(sparsity_pct, 2),
-            "Sample Higher-Order N-Grams": sample_feature_str
-        })
-        
-    df_comparison = pd.DataFrame(records)
-    return df_comparison
+unigram_metrics = measure_ngram_space((1, 1))
 
-# Run Task A Comparison
-configs = [(1, 1), (1, 2), (1, 3), (2, 2)]
-ngram_results_df = compare_ngram_dimensions(faq_df["full_text"].tolist(), configs)
-display(ngram_results_df)
+def update_ngram_chart(ngram_range: Tuple[int, int]) -> None:
+    selected_metrics = measure_ngram_space(ngram_range)
+    labels = ["Unigrams\\n(1, 1)", f"Selected\\n{ngram_range}"]
+    fig, axes = plt.subplots(1, 2, figsize=(10, 4))
 
-print(\"\"\"
-[Task A Key Takeaway]:
-Notice that expanding from Unigrams (1, 1) to Unigrams+Bigrams (1, 2) more than doubles 
-the vocabulary dimension |V|! On massive real-world corpora (millions of documents), 
-n-gram expansion causes severe memory overhead and requires sparse matrix indexing optimizations.
-\"\"\")""")
+    vocabulary_bars = axes[0].bar(
+        labels,
+        [unigram_metrics["vocabulary_size"], selected_metrics["vocabulary_size"]],
+        color=["#4C78A8", "#E45756"],
+    )
+    axes[0].bar_label(vocabulary_bars, padding=3)
+    axes[0].set_title("Vocabulary Size $|V|$")
+    axes[0].set_ylabel("Unique features")
+
+    density_bars = axes[1].bar(
+        labels,
+        [unigram_metrics["density"], selected_metrics["density"]],
+        color=["#59A14F", "#F28E2B"],
+    )
+    axes[1].bar_label(density_bars, fmt="%.2f%%", padding=3)
+    axes[1].set_title("Document-Term Matrix Density")
+    axes[1].set_ylabel("Non-zero cells (%)")
+    axes[1].set_ylim(0, max(unigram_metrics["density"], selected_metrics["density"]) * 1.25)
+
+    fig.suptitle(f"Selected {ngram_range}: {selected_metrics['sparsity']:.2f}% sparse")
+    fig.tight_layout()
+    plt.show()
+
+widgets.interact(update_ngram_chart, ngram_range=ngram_slider);""")
 
     # CELL 24: TASK B CODE
     add_code("""# =============================================================================
